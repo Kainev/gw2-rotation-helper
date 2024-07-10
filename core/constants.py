@@ -1,6 +1,8 @@
 GW2_WINDOW_TITLE = 'Guild Wars 2'
 GW2RH_WINDOW_TITLE = 'Guild Wars 2 Rotation Helper'
 
+_ACTION_HIGHLIGHTS_BASE_RESOLUTION = [2560, 1440]
+
 _BASE_ACTION_HIGHLIGHTS = {
     'weapon_skill_1': [955, 1365, 54, 54],
     'weapon_skill_2': [1011, 1365, 54, 54],
@@ -20,12 +22,10 @@ _BASE_ACTION_HIGHLIGHTS = {
 
 ACTION_HIGHLIGHTS = {}
 
-_ACTION_HIGHLIGHTS_BASE_RESOLUTION = [2560, 1440]
-
-ACTION_NAMES = list(ACTION_HIGHLIGHTS.keys())
+ACTION_NAMES = list(_BASE_ACTION_HIGHLIGHTS.keys())
 
 
-def calculate_highlight_regions(width, height, beastmode):
+def calculate_highlight_regions(width, height):
     width_ratio = _ACTION_HIGHLIGHTS_BASE_RESOLUTION[0] / width
     height_ratio = _ACTION_HIGHLIGHTS_BASE_RESOLUTION[1] / height
 
